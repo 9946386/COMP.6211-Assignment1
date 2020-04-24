@@ -1,0 +1,18 @@
+﻿<Window x:Name="window" x:Class="AnyaWebbAssignment1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AnyaWebbAssignment1"
+        mc:Ignorable="d"
+        Title="MainWindow" SizeChanged="TestWindow_SizeChanged" Width="1076.804" Height="734.536" KeyDown="TestWindow_KeyDown">
+    <Grid Name="background" Margin="0,0,-8,-3">
+        <Grid.Background>
+            <ImageBrush ImageSource="background.jpg"/>
+        </Grid.Background>
+        <Image x:Name="jerry" HorizontalAlignment="Left" VerticalAlignment="Top" Height="132" Margin="266,353,0,0"  Width="132" Source="jerry-running.png" Stretch="Fill" />
+        <Image x:Name="tom" HorizontalAlignment="Left" VerticalAlignment="Top" Height="131" Margin="438,109,0,0"  Width="148" Source="tom-running.png" Stretch="Fill" />
+        <Image x:Name="spike" HorizontalAlignment="Left" VerticalAlignment="Top" Height="170" Margin="660,353,0,0"  Width="117" Source="spike.png" Stretch="Fill" />
+
+    </Grid>
+</Window>
