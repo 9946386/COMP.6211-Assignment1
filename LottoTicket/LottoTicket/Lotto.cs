@@ -91,18 +91,21 @@ namespace LottoTicket
         //Method to sort the lotto numbers in ascending order
         public void SortNumbers()
         {
-            int t;
+            int c;
 
             //Bubble sort
+            //Looping through the array length -2
             for (int a = 0; a <= numArray.Length - 2; a++)
             {
-                for (int i = 0; i <= numArray.Length - 2; i++)
+                //Looping through the array length -2
+                for (int b = 0; b <= numArray.Length - 2; b++)
                 {
-                    if (numArray[i] > numArray[i + 1])
+                    //If the array number is bigger than the index + 1
+                    if (numArray[b] > numArray[b + 1])
                     {
-                        t = numArray[i + 1];
-                        numArray[i + 1] = numArray[i];
-                        numArray[i] = t;
+                        c = numArray[b + 1];
+                        numArray[b + 1] = numArray[b];
+                        numArray[b] = c;
                     }
                 }
             }

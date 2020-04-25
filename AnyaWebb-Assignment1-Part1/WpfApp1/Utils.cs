@@ -129,7 +129,6 @@ namespace AnyaWebbAssignment1
 
             //Reset
             image2.Margin = new Thickness(image2leftMargin, image2topMargin, image2rightMargin, image2bottomMargin);
-
         }
 
         public static void Runaway(Image image1, Image image2, ref bool testFlagX, ref bool testFlagY, Grid aGrid)
@@ -255,15 +254,18 @@ namespace AnyaWebbAssignment1
             }
             #endregion
 
+            //If image 2 collides with image 1
             if ((image2leftMargin + image2.Width) > image1leftMargin &&
                 image2leftMargin < (image1leftMargin + image1.Width) &&
                 (image2topMargin + image2.Height) > image1topMargin &&
                 image2topMargin < (image1topMargin + image1.Height))
             {
+                //Make image 2 smaller
                 image2.Width -= .8;
                 image2.Height -= .8;
             }
 
+            //If not make image 2 slowly get bigger
             else
             {
                 image2.Width += .2;
@@ -273,7 +275,6 @@ namespace AnyaWebbAssignment1
             //Reset
             image2.Margin = new Thickness(image2leftMargin, image2topMargin, image2rightMargin, image2bottomMargin);
             image1.Margin = new Thickness(image1leftMargin, image1topMargin, image1rightMargin, image1bottomMargin);
-
         }
 
     }

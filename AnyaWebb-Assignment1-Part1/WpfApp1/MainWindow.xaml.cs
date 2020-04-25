@@ -37,6 +37,7 @@ namespace AnyaWebbAssignment1
         #endregion
 
         #region Random Element
+        //Used to randomly select image3 speed
         Random randy = new Random();
         #endregion
 
@@ -49,53 +50,58 @@ namespace AnyaWebbAssignment1
             dispatcherTimer.Tick += dispatcherTimer_Tick;
             dispatcherTimer.Interval = new TimeSpan(10000);
             dispatcherTimer.Start();
-
-
         }
 
         private void dispatcherTimer_Tick(object sender, EventArgs e)
         {
+            //Setting image3 random speed to be between 0 and 6
             int speed = randy.Next(0, 6);
 
             #region Move with triggers
+            //Not needed if auto movement is on
             //Utils.MoveWithTriggers(jerry, flagA, flagD, flagW, flagS, 5.00);
             #endregion
 
             #region Auto movement
+            //Calling the auto movement method
             Utils.AutoMovement(jerry, background, ref testFlag1X, ref testFlag1Y);
             #endregion
 
             #region Lock to grid
+            //Calling the lock to grid method
             Utils.LockToGrid(jerry, background);
             #endregion
 
             #region Follow
+            //Calling the follow method
             Utils.Follow(jerry, tom, 1);
             #endregion
 
-            #region Runaway 
+            #region Runaway
+            //Calling the runaway method
             //Needs to be commented out for Collision to work
             //Utils.Runaway(jerry, spike, ref testFlag2X, ref testFlag2Y, background);
             #endregion
 
             #region Collision
+            //Calling the collision method
             //Needs to be commented out for Runaway to work properly
             Utils.Collide(jerry, spike, ref testFlag2X, ref testFlag2Y, background, speed);
             #endregion
-
         }
 
+        #region Change size of window
         private void TestWindow_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             background.Width = window.Width - 30;
             background.Height = window.Height - 50;
         }
+        #endregion
 
         #region Key Pressed test
 
         private void TestWindow_KeyDown(object sender, KeyEventArgs e)
         {
-
             flagA = false;
             flagD = false;
             flagW = false;
@@ -107,6 +113,6 @@ namespace AnyaWebbAssignment1
             if (e.Key == Key.S) flagS = true;
         }
 
-        #endregion
+        #endregion2
     }
 }
