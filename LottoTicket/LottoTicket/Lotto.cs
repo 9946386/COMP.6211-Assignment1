@@ -20,7 +20,7 @@ namespace LottoTicket
         //Initializing above feilds in the constructor
         public Lotto()
         {
-            numArray = new int[6];
+            numArray = new int[6] { 0, 0, 0, 0, 0, 0 };
             randomNumber = new Random(DateTime.Now.Millisecond);
         }
         #endregion
@@ -30,9 +30,25 @@ namespace LottoTicket
         public void GenerateNumbers()
         {
             //Looping through the numArray and adding a random number to each element
-            for (int i = 0; i < numArray.Length; i++)                
+            for (int i = 0; i < numArray.Length; i++)
             {
-                numArray[i] = randomNumber.Next(1, 50); //Random numbers must be between 1-50
+                int newNum;
+               
+                newNum = randomNumber.Next(1, 50); //Adding a new random number
+
+                //Looping through the numbers already in the array
+                foreach (int x in numArray) 
+                {
+                    if (newNum == x) //If the new number is already found in the array then loop again
+                    {
+                        i--; 
+                    }
+                    else //If not then break out of the loop
+                    {
+                        break;
+                    }
+                }
+                numArray[i] = newNum; //Put the unique number into the array
             }
         }
         #endregion
@@ -44,12 +60,14 @@ namespace LottoTicket
             //Looping through the array to display each random number
             for (int i = 0; i < numArray.Length; i++)
             {
+                //If the number in the array is less than 10 place a " " infront of and after the number
                 if (numArray[i] < 10)
                 {
                     OutputTextBlock.Text += " ";
                     OutputTextBlock.Text += numArray[i] + "  ";
                 }
 
+                //If not then only add " " after the number
                 else
                 {
                     OutputTextBlock.Text += numArray[i] + "  ";
@@ -62,9 +80,9 @@ namespace LottoTicket
         //Method to set all the numbers to 0
         public void SetNumbersToZero()
         {
-            for (int i = 0; i < numArray.Length; i++)
+            for (int i = 0; i < numArray.Length; i++) //Looping through the array
             {
-                numArray[i] = 0;
+                numArray[i] = 0; //Set the numbers in the array to zero
             }
         }
         #endregion

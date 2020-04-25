@@ -12,3 +12,17 @@ C:\Users\Anya_\Code\COMP.6211-Assignment1\LottoTicket\LottoTicket\obj\Debug\Lott
 C:\Users\Anya_\Code\COMP.6211-Assignment1\LottoTicket\LottoTicket\obj\Debug\LottoTicket.csproj.GenerateResource.cache
 C:\Users\Anya_\Code\COMP.6211-Assignment1\LottoTicket\LottoTicket\obj\Debug\LottoTicket.exe
 C:\Users\Anya_\Code\COMP.6211-Assignment1\LottoTicket\LottoTicket\obj\Debug\LottoTicket.pdb
+C:\Users\Anya_\Code\Assignments\COMP.6211-Assignment1\LottoTicket\LottoTicket\bin\Debug\LottoTicket.exe.config
+C:\Users\Anya_\Code\Assignments\COMP.6211-Assignment1\LottoTicket\LottoTicket\bin\Debug\LottoTicket.exe
+C:\Users\Anya_\Code\Assignments\COMP.6211-Assignment1\LottoTicket\LottoTicket\bin\Debug\LottoTicket.pdb
+C:\Users\Anya_\Code\Assignments\COMP.6211-Assignment1\LottoTicket\LottoTicket\obj\Debug\LottoTicket.csprojAssemblyReference.cache
+C:\Users\Anya_\Code\Assignments\COMP.6211-Assignment1\LottoTicket\LottoTicket\obj\Debug\MainWindow.g.cs
+C:\Users\Anya_\Code\Assignments\COMP.6211-Assignment1\LottoTicket\LottoTicket\obj\Debug\App.g.cs
+C:\Users\Anya_\Code\Assignments\COMP.6211-Assignment1\LottoTicket\LottoTicket\obj\Debug\LottoTicket_MarkupCompile.cache
+C:\Users\Anya_\Code\Assignments\COMP.6211-Assignment1\LottoTicket\LottoTicket\obj\Debug\LottoTicket_MarkupCompile.lref
+C:\Users\Anya_\Code\Assignments\COMP.6211-Assignment1\LottoTicket\LottoTicket\obj\Debug\MainWindow.baml
+C:\Users\Anya_\Code\Assignments\COMP.6211-Assignment1\LottoTicket\LottoTicket\obj\Debug\LottoTicket.g.resources
+C:\Users\Anya_\Code\Assignments\COMP.6211-Assignment1\LottoTicket\LottoTicket\obj\Debug\LottoTicket.Properties.Resources.resources
+C:\Users\Anya_\Code\Assignments\COMP.6211-Assignment1\LottoTicket\LottoTicket\obj\Debug\LottoTicket.csproj.GenerateResource.cache
+C:\Users\Anya_\Code\Assignments\COMP.6211-Assignment1\LottoTicket\LottoTicket\obj\Debug\LottoTicket.exe
+C:\Users\Anya_\Code\Assignments\COMP.6211-Assignment1\LottoTicket\LottoTicket\obj\Debug\LottoTicket.pdb
