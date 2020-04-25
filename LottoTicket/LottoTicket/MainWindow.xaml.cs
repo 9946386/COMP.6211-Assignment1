@@ -23,7 +23,6 @@ namespace LottoTicket
         public MainWindow()
         {
             InitializeComponent();
-
         }
 
         private void ButtonSelect_Click(object sender, RoutedEventArgs e)
@@ -38,33 +37,49 @@ namespace LottoTicket
             //Getting the number entered in the text box and assinging it to LuckyDips variable
             LuckyDips = int.Parse(TextBoxTickets.Text);
 
-            TextBlockTickets.Text = "";
-
+            #region Ticket Header
             //Lotto ticket header
-            TextBlockTickets.Text = "------------------------------------\n";
-            TextBlockTickets.Text += "----                            ----\n";
-            TextBlockTickets.Text += "----        LOTTO TICKET        ----\n";
-            TextBlockTickets.Text += "----                            ----\n";
-            TextBlockTickets.Text += "------------------------------------\n";
-            TextBlockTickets.Text += "-----                          -----\n";
+            TextBlockTickets.Text = "**************************************\n";
+            TextBlockTickets.Text += "**                                  **\n";
+            TextBlockTickets.Text += "**           LOTTO TICKET           **\n";
+            TextBlockTickets.Text += "**                                  **\n";
+            TextBlockTickets.Text += "**************************************\n";
+            TextBlockTickets.Text += "**                                  **\n";
+            #endregion
 
-            //Looping through the amount of rows entered
-            for (int i = 0; i < LuckyDips; i++)
+            #region Ticket Numbers
+            //Limiting the selection of numbers to between 1 and 20
+            //If the number entered is higher than or equal to 21 run this:
+            if (LuckyDips >= 21)
             {
-                TextBlockTickets.Text += "----- ";
+                TextBlockTickets.Text += "**       Please enter a number      **\n" +
+                                         "**          between 1 - 20          **\n";
+            }
 
-                //Calling the methods in the Lotto class
-                row.SetNumbersToZero();
-                row.GenerateNumbers();
-                row.SortNumbers();
-                row.PrintNumbers(TextBlockTickets);
+            //If is it less than 21 run this:
+            else
+            {
+                //Looping through the amount of rows entered
+                for (int i = 0; i < LuckyDips; i++)
+                {
+                    TextBlockTickets.Text += "**      ";
 
-                TextBlockTickets.Text += "-----\n";
-            } 
+                    //Calling the methods in the Lotto class
+                    row.SetNumbersToZero();
+                    row.GenerateNumbers();
+                    row.SortNumbers();
+                    row.PrintNumbers(TextBlockTickets);
 
+                    TextBlockTickets.Text += "    **\n";
+                }
+            }
+            #endregion
+
+            #region Ticket Footer
             //Ticket footer
-            TextBlockTickets.Text += "-----                          -----\n";
-            TextBlockTickets.Text += "------------------------------------\n";
+            TextBlockTickets.Text += "**                                  **\n";
+            TextBlockTickets.Text += "**************************************\n";
+            #endregion
         }
     }
 }
