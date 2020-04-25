@@ -28,21 +28,43 @@ namespace LottoTicket
 
         private void ButtonSelect_Click(object sender, RoutedEventArgs e)
         {
+            //Calling the lotto class
             Lotto row;
+            //LuckyDip variable to store the amount of ticket rows
+            int LuckyDips;
 
             row = new Lotto();
 
+            //Getting the number entered in the text box and assinging it to LuckyDips variable
+            LuckyDips = int.Parse(TextBoxTickets.Text);
+
             TextBlockTickets.Text = "";
 
-            TextBlockTickets.Text += "--------Your Lotto Ticket--------";
-            TextBlockTickets.Text += "--      ";
+            //Lotto ticket header
+            TextBlockTickets.Text = "------------------------------------\n";
+            TextBlockTickets.Text += "----                            ----\n";
+            TextBlockTickets.Text += "----        LOTTO TICKET        ----\n";
+            TextBlockTickets.Text += "----                            ----\n";
+            TextBlockTickets.Text += "------------------------------------\n";
+            TextBlockTickets.Text += "-----                          -----\n";
 
-            row.SetNumbersToZero();
-            row.GenerateNumbers();
-            row.PrintNumbers(TextBlockTickets);
+            //Looping through the amount of rows entered
+            for (int i = 0; i < LuckyDips; i++)
+            {
+                TextBlockTickets.Text += "----- ";
 
+                //Calling the methods in the Lotto class
+                row.SetNumbersToZero();
+                row.GenerateNumbers();
+                row.SortNumbers();
+                row.PrintNumbers(TextBlockTickets);
 
-            TextBlockTickets.Text += "     --\n";
+                TextBlockTickets.Text += "-----\n";
+            } 
+
+            //Ticket footer
+            TextBlockTickets.Text += "-----                          -----\n";
+            TextBlockTickets.Text += "------------------------------------\n";
         }
     }
 }

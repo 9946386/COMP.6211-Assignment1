@@ -208,7 +208,7 @@ namespace AnyaWebbAssignment1
             #endregion
         }
 
-        public static void Collide(Image image1, Image image2, ref bool testFlagX, ref bool testFlagY, Grid aGrid)
+        public static void Collide(Image image1, Image image2, ref bool testFlagX, ref bool testFlagY, Grid aGrid, int speed)
         {
             //Find location of image one 
             double image1leftMargin = image1.Margin.Left;
@@ -223,10 +223,10 @@ namespace AnyaWebbAssignment1
             double image2bottomMargin = image2.Margin.Bottom;
 
             //Moving image2 location - Only needed if collision is commented out.
-            if (testFlagX == true) image2leftMargin = image2leftMargin - 2;
-            if (testFlagX == false) image2leftMargin = image2leftMargin + 2;
-            if (testFlagY == true) image2topMargin = image2topMargin - 2;
-            if (testFlagY == false) image2topMargin = image2topMargin + 2;
+            if (testFlagX == true) image2leftMargin = image2leftMargin - speed;
+            if (testFlagX == false) image2leftMargin = image2leftMargin + speed;
+            if (testFlagY == true) image2topMargin = image2topMargin - speed;
+            if (testFlagY == false) image2topMargin = image2topMargin + speed;
 
             #region Lock to grid
             // Lock image 2 to grid - Only needed if collision is commented out.

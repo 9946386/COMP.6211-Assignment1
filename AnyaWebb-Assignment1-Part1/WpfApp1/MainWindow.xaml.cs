@@ -36,6 +36,10 @@ namespace AnyaWebbAssignment1
         bool flagS = false;
         #endregion
 
+        #region Random Element
+        Random randy = new Random();
+        #endregion
+
         public MainWindow()
         {
             InitializeComponent();
@@ -45,10 +49,14 @@ namespace AnyaWebbAssignment1
             dispatcherTimer.Tick += dispatcherTimer_Tick;
             dispatcherTimer.Interval = new TimeSpan(10000);
             dispatcherTimer.Start();
+
+
         }
-      
+
         private void dispatcherTimer_Tick(object sender, EventArgs e)
         {
+            int speed = randy.Next(0, 6);
+
             #region Move with triggers
             //Utils.MoveWithTriggers(jerry, flagA, flagD, flagW, flagS, 5.00);
             #endregion
@@ -72,7 +80,7 @@ namespace AnyaWebbAssignment1
 
             #region Collision
             //Needs to be commented out for Runaway to work properly
-            Utils.Collide(jerry, spike, ref testFlag2X, ref testFlag2Y, background);
+            Utils.Collide(jerry, spike, ref testFlag2X, ref testFlag2Y, background, speed);
             #endregion
 
         }

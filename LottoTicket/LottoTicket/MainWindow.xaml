@@ -8,10 +8,10 @@
         Title="MainWindow" Height="605" Width="422">
     <Grid Margin="0,0,2,-3">
         <Image x:Name="BackgroundImage" HorizontalAlignment="Left" Height="577" VerticalAlignment="Top" Width="412" Opacity="0.3" Source="Lotto.png" Stretch="Fill"/>
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="25,544,0,0" TextWrapping="Wrap" Text="Enter the number of rows (1 to 20)" VerticalAlignment="Top"/>
-        <TextBox x:Name="TextBoxTickets" HorizontalAlignment="Left" Height="23" Margin="226,543,0,0" TextWrapping="Wrap" Text="20" VerticalAlignment="Top" Width="33"/>
-        <Button x:Name="ButtonSelect" Content="Press for Ticket" HorizontalAlignment="Left" Margin="274,545,0,0" VerticalAlignment="Top" Width="108" Click="ButtonSelect_Click"/>
-        <TextBlock x:Name="TextBlockTickets" HorizontalAlignment="Left" Margin="25,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="365" Height="503" FontFamily="Courier New" FontSize="16" FontWeight="Bold" Background="#CCFFFFFF"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="25,538,0,0" TextWrapping="Wrap" Text="Enter the number of rows (1 to 20)" VerticalAlignment="Top"/>
+        <TextBox x:Name="TextBoxTickets" HorizontalAlignment="Left" Height="23" Margin="226,537,0,0" TextWrapping="Wrap" Text="20" VerticalAlignment="Top" Width="33"/>
+        <Button x:Name="ButtonSelect" Content="Press for Ticket" HorizontalAlignment="Left" Margin="274,539,0,0" VerticalAlignment="Top" Width="108" Click="ButtonSelect_Click"/>
+        <TextBlock x:Name="TextBlockTickets" HorizontalAlignment="Left" Margin="25,19,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="365" Height="503" FontFamily="Courier New" FontSize="16" FontWeight="Bold" Background="#CCFFFFFF"/>
 
     </Grid>
 </Window>
