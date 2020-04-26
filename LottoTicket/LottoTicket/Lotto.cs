@@ -29,26 +29,21 @@ namespace LottoTicket
         //Method to fill the array with random numbers
         public void GenerateNumbers()
         {
+            int uniqueNum;
+
             //Looping through the numArray and adding a random number to each element
             for (int i = 0; i < numArray.Length; i++)
-            {
-                int newNum;
-               
-                newNum = randomNumber.Next(1, 50); //Adding a new random number
+            {               
+                uniqueNum = randomNumber.Next(1, 50); //Adding a new random number
 
-                //Looping through the numbers already in the array
-                foreach (int x in numArray) 
+                if (Array.Exists(numArray, element => element == uniqueNum)) //If the number already exists in the array
                 {
-                    if (newNum == x) //If the new number is already found in the array then loop again
-                    {
-                        i--; 
-                    }
-                    else //If not then break out of the loop
-                    {
-                        break;
-                    }
+                    i--; //-1 on loop counter so it loops again
                 }
-                numArray[i] = newNum; //Put the unique number into the array
+                else
+                {
+                    numArray[i] = uniqueNum; //Put the unique number into the array
+                }
             }
         }
         #endregion
